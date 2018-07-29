@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/journey/style/style.css">
+<title> marcelo's place</title>
+</head>
+<body>
+	<header>
+		<div class="container">
+		<h2>OverTheWire Bandit writeups</h2>
+		</div>
+	</header>
+	<div class ="container">
+		<section id="bandit">
+		<h3>Bandit 5</h3>
+		<p>Achar um arquivo no meio de muitas pastas, usar o comando find na propria pasta, setando o tipo para -f, significando que é um arquivo regular, no caso do 06 era um arquivo readable, entao -readable, e tinhamos o tamanho do arquivo, que era de 1033 bytes, logo -size 1033c. c no final pois é para o número exato de bytes, caso quisesse setar para blocos de bytes, seria -size 512b para blocos de 512 bytes cada por exemplo. Por fim, como era um arquivo nao executavel, ! -executable para negar que era executavel.
+
+comando final:
+
+find . -type f -readable -size 1033c ! -executable
+
+pass bandit06: DXjZPULLxYr17uwoI01bNLQbtFemEgo7</p>
+</body>
+</html>
