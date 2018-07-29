@@ -328,6 +328,23 @@ hr {
 	background: url("../images/blacktocat.png") 0 0 no-repeat
 }
 
+
+
+.btn-twitter .icon {
+	opacity: 0.6;
+	background: url("../images/twitter.png") 0 0 no-repeat
+}
+
+.btn-linkedin .icon {
+	opacity: 0.6;
+	background: url("../images/linkedin.png") 0 0 no-repeat
+}
+
+.btn-gmail .icon {
+	opacity: 0.6;
+	background: url("../images/gmail.png") 0 0 no-repeat
+}
+
 a {
 	color: #63c0f5;
 	text-shadow: 0 0 5px rgba(104, 182, 255, 0.5)
