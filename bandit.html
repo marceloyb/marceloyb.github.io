@@ -19,10 +19,19 @@
 		<h3>Bandit 5</h3>
 		<p>Achar um arquivo no meio de muitas pastas, usar o comando find na propria pasta, setando o tipo para -f, significando que é um arquivo regular, no caso do 06 era um arquivo readable, entao -readable, e tinhamos o tamanho do arquivo, que era de 1033 bytes, logo -size 1033c. c no final pois é para o número exato de bytes, caso quisesse setar para blocos de bytes, seria -size 512b para blocos de 512 bytes cada por exemplo. Por fim, como era um arquivo nao executavel, ! -executable para negar que era executavel. </p>
 
-<p> comando final: </p>
+		<p> comando final: </p>
 
-<p> find . -type f -readable -size 1033c ! -executable </p>
+		<p> find . -type f -readable -size 1033c ! -executable </p>
 
-<p> pass bandit06: DXjZPULLxYr17uwoI01bNLQbtFemEgo7</p>
+		<p> pass bandit06: DXjZPULLxYr17uwoI01bNLQbtFemEgo7</p>
+
+		<h3>Bandit 6</h3>
+		<p>Similar ao nivel anterior, só que nesse é necessário procurar no servidor inteiro, tendo apenas o tamanho do arquivo e os grupos que sao donos dele.</p>
+
+		<p>para usuario -user, para grupo -group, e como era no servidor inteiro, o diretório de partida é o root (/)</p>
+
+		<p>find / -user bandit7 -group bandit6 -size 33c -readable -type f ! -executable</p>
+
+		<p>Password: HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs</p>
 </body>
 </html>
