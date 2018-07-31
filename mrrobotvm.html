@@ -46,5 +46,22 @@
 		<p>Time to run the command again, this time with the username value "elliot" and the file in the pass field, dont forgeting to change the failure message</p>
 		<p></p>
 		<p>hydra -vV -l elliot -P a 192.168.100.75 http-post-form '/wp-login.php:log=^USER^&amp;pwd=^PASS^&amp;wp-submit=Log+In:F=is incorrect'	</p>
+		<p>And boom, we got the password: ER28-0652</p>
+		<p>Logging in the page, we got access to the wordpress panel, and from here we can upload a reverse shell exploit, to get us a shell in the server</p>
+		<p>Got one from http://pentestmonkey.net/tools/web-shells/php-reverse-shell</p>
+		<p>Changed the config to my machine ip and port 9999, uploaded the php file to Media/Add New, put netcat to listen on my machine with 'nc -l -v -n -p 9999 and opened the exploit directory, getting a shell</p>
+		<p>Next step is spawning a terminal from the shell</p>
+		<p>Accomplished by python -c "import pty; pty.spawn('/bin/bash');"</p>
+		<p>Now time to see in what we're into.. First step was to ls, a lot of directories there, and not interesting for us.. then went to /home, there found robot directory, which had key-2-of-3.txt and password.raw-md5 inside.. no permissions to open key-2, but can open password raw, which got us a md5 hash.</p>
+		<p>went to crackstation.net and cracked the hash, which resulted in abcdefghijklmnopqrstuvwxyz, the password for robot user.</p>
+		<p>Back to the terminal we got, made su robot and inserted the pass</p>
+		<p>Now we have the permissions to open key2, which is 822c73956184f694993bede3eb39f959</p>
+		<p>Objective now is privilege escalation.. with command find / -user root -perm -4000 -print 2&gt;/dev/null we find all programs with setuid in the system</p>
+		<p>one particular is from a list that allow privilege escalation, nmap</p>
+		<p>Nmap from versions 2.02 to 5.21 have an interactive mode, which allow users to execute shell commands.. the nmap from the VM is version 3.81, thus allowing us to do it.</p>
+		<p>To enter in nmap interactive mode just "nmap --interactive". once inside, !sh then spawning a shell</p>
+		<p>First thing after spawning shell, went to /root and saw what's there, and it's the last key..</p>
+		<p>04787ddef27c3dee1ee161b21670b4e4</p>
+		<p>Mr Robot vm pwned</p>
 </body>
 </html>
