@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/journey/style/style.css">
+<title> marcelo's place</title>
+</head>
+<body>
+	<header>
+		<div class="container">
+		<h1>VulnHub Mr Robot VM writeup</h1>
+		</div>
+	</header>
+	<div class ="container">
+		<section id="writeup">
+		<p>First things first:</p>
+
+		<p>Starting by the /robots.txt was a good guess in the MrRobot VM, and there i got the path to the first key: /key-1-of-3.txt</p>
+		<p>Key1: 073403c8a58a1f80d943455fb30724b9</p>
+		<p></p>
+		<p>Had an extra file there too, which i saved and took a peek</p>
+		<p>It had more than 80k lines, with a lot of them repeated, so pass through uniq and it resulted in 11k lines, which didnt look too promising.</p>
+		<p></p>
+		<p>Ran a scan with nikto, who showed that /wp-login existed, and returned Invalid username, which we can guess by a bruteforce attack a valid login. </p>
+		<p></p>
+		<p>From an cookie peek with BURP, we could see that payload of post included a line with log=username&amp;pwd=pass&amp;wp-submit=Log+In, which tells to us that this is what we need to pass in a post form, if we want to try a bruteforce</p>
+		<p></p>
+		<p>With an start point by the file with previously got, began an attack with hydra, to bruteforce and get a valid username</p>
+		<p></p>
+		<p>hydra -vV -L file -p fk 192.168.100.75 http-post-form '/wp-login.php:log=^USER^&amp;pwd=^PASS^&amp;wp-submit=Log+In:F=Invalid username'</p>
+		<p></p>
+		<p>Explaining the command:</p>
+		<p></p>
+		<p>-vV to verbose attack</p>
+		<p>-L to test logins from a file</p>
+		<p>-p to pass a unique password to be tested, we dont care about the pass first, we need a valid login to begin</p>
+		<p>192.168.100.75 is the ip of the vm in my netwrk</p>
+		<p>http-post-form telling what we're trying to brute force, in this case a http post form</p>
+		<p>'/wp-login.php:log=^USER^&amp;pwd=^PASS^*wp-submit=Log+In:F=Invalid username' the payload, basically before the first ":" is the path where the form is located, after that is the post parameters, which we got from BURP and made substitutions with "^USER^" and "^PASS^", and after the 2nd ":", is the failure condition of an attempt, which must contain "Invalid username" in the response.</p>
+		<p></p>
+		<p>After a while, the attack completes and we get a viable username: elliot</p>
+		<p></p>
+		<p>Time to run the command again, this time with the username value "elliot" and the file in the pass field, dont forgeting to change the failure message</p>
+		<p></p>
+		<p>hydra -vV -l elliot -P a 192.168.100.75 http-post-form '/wp-login.php:log=^USER^&amp;pwd=^PASS^&amp;wp-submit=Log+In:F=is incorrect'	</p>
+</body>
+</html>
