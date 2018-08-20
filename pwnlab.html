@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/journey/style/style.css">
+<title> marcelo's place</title>
+</head>
+<body>
+	<header>
+		<div class="container">
+		<h1>VulnHub Mr Robot VM writeup</h1>
+		</div>
+	</header>
+	<div class ="container">
+		<section id="writeup">
+
+<p> config.php ilegivel </p>
+
+<p> usa essa tatica que vai converter pra base64 o conteudo </p>
+<p> https://diablohorn.com/2010/01/16/interesting-local-file-inclusion-method/ </p>
+
+<p> http://192.168.100.76/?page=php://filter/convert.base64-encode/resource=config </p>
+
+<p> vai retornar uma string codificada em base 64: PD9waHANCiRzZXJ2ZXIJICA9ICJsb2NhbGhvc3QiOw0KJHVzZXJuYW1lID0gInJvb3QiOw0KJHBhc3N3b3JkID0gIkg0dSVRSl9IOTkiOw0KJGRhdGFiYXNlID0gIlVzZXJzIjsNCj8+ </p>
+
+<p> passa no conversor q tem a senha do banco de dados </p>
+
+<p> root:H4u%QJ_H99 </p>
+
+<p> Com isso, acessa o bd e tem 3 usuarios e as senhas codificadas em base64 </p>
+<p> | kent | Sld6WHVCSkpOeQ== | </p>
+<p> | mike | U0lmZHNURW42SQ== | SIfdsTEn6I </p>
+<p> | kane | aVN2NVltMkdSbw== | iSv5Ym2GRo </p>
+
+<p> decodifica um dos usuários e faz o login </p>
+
+<p> quando la dentro do login, precisamos tentar descobrir o que é possível fazer upload </p>
+
+<p> como o fonte da pagina nao ajuda muito, vamos fazer a mesma tatica e converter para base64 usando um filter a pagina upload </p>
+
+<p> com isso é possível ver que a whitelist aqui para upload é de imagens.. gif, jpeg e afins. </p>
+
+<p> entao, basta criar um reverse shell de php com um mime de gif "GIF98" e mandar bala. </p>
+
+<p> feito isso, é necessário executar o código de alguma maneira. </p>
+
+<p> analisando a pagina index, é possivel ver que um trecho de codigo </p>
+
+<p>if (isset($_COOKIE['lang'])) </p>
+<p>{ </p>
+	<p>include("lang/".$_COOKIE['lang']); </p>
+<p>} </p>
+
+<p>possibilita LFI no payload do cookie </p>
+
+<p>abrindo burp e capturando o trafego na pagina index.php, modificar o cookie para COOKIE=.......; lang=../localdocodigo </p>
+
+<p>antes disso ter o nc aberto em um terminal, pronto para ouvir a shell recebida. </p>
+<p>temos uma shell então, portanto spawnar uma tty </p>
+
+<p>python -c 'import pty; pty.spawn("/bin/sh")' </p>
+
+<p>com a shell interativa spawnada, vamos trocar para um dos usuários que existem no banco de dados previamente achado </p>
+
+<p>vamos no kane.. </p>
+
+<p>apos logado nele, encontramos um binario com a flag de setuid, msgformike </p>
+
+<p>apos executar o binario, vemos que ele simplesmente executa o binário do "cat" em um arquivo do sistema. </p>
+
+<p>podemos manipular isso, como previamente encontrado no leviathan do overthewire, trocando o diretório base em que a shell procura os binarios </p>
+
+<p>se dermos echo $PATH vamos ver que é no diretório /usr/local/bin </p>
+
+<p>vamos setar para o diretório atual export PATH=. </p>
+
+<p>entao criamos um arquivo de nome "cat" com o conteudo /bin/sh, para que o binario msgmike execute o nosso arquivo, achando que é o cat, mas na verdade vai spawnar uma shell. </p>
+
+<p>após termos nossa shell do usuario mike, vamos olhar no diretório home dele para ver o que encontramos </p>
+
+<p>para nossa surpresa tem um binário setuid "msg2root", cujo dono é o usuário root </p>
+
+<p>executando esse binário vemos que ele simplesmente da um "echo" em qualquer coisa que passarmos como mensagem. </p>
+
+<p>aproveitando disso, podemos executar um comando, para spawnar uma shell para nós </p>
+
+<p>./msg2root </p>
+
+<p>$(/bin/sh -i) </p>
+
+<p>e temos root, vm pwnlab pwned! </p>
+
+</body>
+</html>
