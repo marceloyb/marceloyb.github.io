@@ -11,13 +11,17 @@
 <body>
 	<header>
 		<div class="container">
-		<h1>VulnHub Mr Robot VM writeup</h1>
+		<h1>VulnHub pwnlab VM writeup</h1>
 		</div>
 	</header>
 	<div class ="container">
 		<section id="writeup">
+<p> primeiro rodamos um nikto na pagina e vemos que config.php esta a mostra</p>
 
-<p> config.php ilegivel </p>
+
+<p> porem como nem tudo é facil, o config.php é ilegivel </p>
+
+<p> após pesquisa, encontro um método possível</p>
 
 <p> usa essa tatica que vai converter pra base64 o conteudo </p>
 <p> https://diablohorn.com/2010/01/16/interesting-local-file-inclusion-method/ </p>
