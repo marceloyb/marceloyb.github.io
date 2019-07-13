@@ -8,128 +8,137 @@
 <title> marcelo's place</title>
 </head>
 
-<h1 id="ciclodevidadodesenvolvimentodesoftwareedevsecops"><strong>Ciclo de vida do desenvolvimento de software e DevSecOps</strong></h1>
+<body>
+<header>
+	<div class="container">
+	<h1><h1 id="sdlcdevsecops"><strong>A evolução do SDLC até chegar no DevSecOps</strong></h1>
+	</div>
+</header>
 
-<p>O Ciclo de vida do desenvolvimento de software (Software Development Lifecycle - SDLC) é um processo sistemático de produção de software que garante a qualidade e a corretude do que foi construído. O SDLC visa produzir software de alta qualidade, e que atenda as necessidades do cliente. Esse ciclo de vida é constituído por diversas fases, e cada fase tem seus próprios processos e gera seus próprios artefatos.</p>
+<div class ="container">
+	<section id="article">
+    
+    <p>O Ciclo de vida do desenvolvimento de software (Software Development Lifecycle - SDLC) é um processo sistemático de produção de software que garante a qualidade e a corretude do que foi construído. O SDLC visa produzir software de alta qualidade, e que atenda as necessidades do cliente. Esse ciclo de vida é constituído por diversas fases, e cada fase tem seus próprios processos e gera seus próprios artefatos.</p>
 
-<p>Existem diferentes abordagens e visões sobre quais as fases do SDLC, porém o núcleo de todas essas abordagens é <strong>geralmente</strong> composto pelos seguintes estágios:</p>
+    <p>Existem diferentes abordagens e visões sobre quais as fases do SDLC, porém o núcleo de todas essas abordagens é <strong>geralmente</strong> composto pelos seguintes estágios:</p>
 
-<ul>
-<li><strong>Análise de Requisitos:</strong> Entender quais são os requisitos do cliente para o sistema, o que o sistema precisa fazer</li>
+    <ul>
+    <li><strong>Análise de Requisitos:</strong> Entender quais são os requisitos do cliente para o sistema, o que o sistema precisa fazer</li>
 
-<li><strong>Modelagem:</strong> Definir qual será a solução técnica com base nos requisitos, e como será feito</li>
+    <li><strong>Modelagem:</strong> Definir qual será a solução técnica com base nos requisitos, e como será feito</li>
 
-<li><strong>Desenvolvimento:</strong> Construir o sistema com base na solução técnica definida</li>
+    <li><strong>Desenvolvimento:</strong> Construir o sistema com base na solução técnica definida</li>
 
-<li><strong>Homologação:</strong> Validar que o que foi construído está cumprindo a necessidade do cliente</li>
+    <li><strong>Homologação:</strong> Validar que o que foi construído está cumprindo a necessidade do cliente</li>
 
-<li><strong>Disponibilização do software para o usuário:</strong> Como o próprio nome sugere, disponibilizar a solução construída para que o cliente possa fazer uso</li>
-</ul>
+    <li><strong>Disponibilização do software para o usuário:</strong> Como o próprio nome sugere, disponibilizar a solução construída para que o cliente possa fazer uso</li>
+    </ul>
 
-<h2 id="metodologiasdedesenvolvimento"><strong>Metodologias de desenvolvimento</strong></h2>
+    <h2 id="metodologiasdedesenvolvimento"><strong>Metodologias de desenvolvimento</strong></h2>
 
-<p>Com o passar dos anos, diferentes metodologias de desenvolvimento surgiram, e entre as primeiras que foram amplamente aceitas está o Modelo Cascata. Esse modelo tem a particularidade de que uma fase só começa no momento em que a fase imediatamente anterior a essa termina, o que traz alguns <strong>problemas</strong>, entre os quais:</p>
+    <p>Com o passar dos anos, diferentes metodologias de desenvolvimento surgiram, e entre as primeiras que foram amplamente aceitas está o Modelo Cascata. Esse modelo tem a particularidade de que uma fase só começa no momento em que a fase imediatamente anterior a essa termina, o que traz alguns <strong>problemas</strong>, entre os quais:</p>
 
-<ol>
-<li>O Modelo Cascata tem iterações (execução de todas as fases do ciclo de desenvolvimento) de longa duração, e o cliente só irá ter contato com o sistema quando o projeto estiver próximo ao final;</li>
+    <ol>
+    <li>O Modelo Cascata tem iterações (execução de todas as fases do ciclo de desenvolvimento) de longa duração, e o cliente só irá ter contato com o sistema quando o projeto estiver próximo ao final;</li>
 
-<li>Como reflexo do problema citado anteriormente, o cliente só irá detectar divergências entre o que ele tinha como requisito, e o que foi construído, quando o projeto já estiver quase terminado.</li>
-</ol>
+    <li>Como reflexo do problema citado anteriormente, o cliente só irá detectar divergências entre o que ele tinha como requisito, e o que foi construído, quando o projeto já estiver quase terminado.</li>
+    </ol>
 
-<p><img src="/media/articles/sdlc/waterfall.png" alt="waterfall method" /></p>
+    <p><img src="/media/articles/sdlc/waterfall.png" alt="waterfall method" /></p>
 
-<p>Esses problemas, por si só, já podem arruinar o projeto, pois o usuário do sistema construído irá demorar para receber a solução em mãos, e poderá não ficar satisfeito ao recebê-la, ou até mesmo, em uma situação extrema, a solução construída pode não atender às necessidades do cliente, resultando em um fracasso total.</p>
+    <p>Esses problemas, por si só, já podem arruinar o projeto, pois o usuário do sistema construído irá demorar para receber a solução em mãos, e poderá não ficar satisfeito ao recebê-la, ou até mesmo, em uma situação extrema, a solução construída pode não atender às necessidades do cliente, resultando em um fracasso total.</p>
 
-<p>Modelos de desenvolvimento que vieram após o Cascata, como o Modelo Incremental e o Modelo Espiral, surgiram com o objetivo de sanar essa deficiência do Modelo Cascata, e com eles começou-se a ter um foco maior no que o cliente deseja para o sistema, com ciclos de desenvolvimento mais curtos, e entregas menores. Entre as <strong>principais vantagens</strong> que esses modelos trouxeram estão:</p>
+    <p>Modelos de desenvolvimento que vieram após o Cascata, como o Modelo Incremental e o Modelo Espiral, surgiram com o objetivo de sanar essa deficiência do Modelo Cascata, e com eles começou-se a ter um foco maior no que o cliente deseja para o sistema, com ciclos de desenvolvimento mais curtos, e entregas menores. Entre as <strong>principais vantagens</strong> que esses modelos trouxeram estão:</p>
 
-<ol>
-<li>Fazer entregas menores é menos arriscado do que fazer entregas maiores, pois, caso existam divergências entre o que o cliente deseja e o que foi construído, essas divergências são detectadas mais cedo, gerando uma maior responsividade no processo de desenvolvimento;</li>
+    <ol>
+    <li>Fazer entregas menores é menos arriscado do que fazer entregas maiores, pois, caso existam divergências entre o que o cliente deseja e o que foi construído, essas divergências são detectadas mais cedo, gerando uma maior responsividade no processo de desenvolvimento;</li>
 
-<li>Com a realização de um número maior de iterações em menos tempo, se um grande erro é cometido, apenas a última iteração é descartada, resultando em uma menor perda de tempo.</li>
-</ol>
+    <li>Com a realização de um número maior de iterações em menos tempo, se um grande erro é cometido, apenas a última iteração é descartada, resultando em uma menor perda de tempo.</li>
+    </ol>
 
-<p>Os benefícios de se ter iterações mais rápidas e flexíveis foram logo notados, e outras melhorias começaram a ser aplicadas no processo de desenvolvimento, como a realização dos processos de análise, desenvolvimento e homologação "em paralelo", o que começou a ser a base do desenvolvimento ágil de software.</p>
+    <p>Os benefícios de se ter iterações mais rápidas e flexíveis foram logo notados, e outras melhorias começaram a ser aplicadas no processo de desenvolvimento, como a realização dos processos de análise, desenvolvimento e homologação "em paralelo", o que começou a ser a base do desenvolvimento ágil de software.</p>
 
-<h2 id="omanifestogil"><strong>O Manifesto Ágil</strong></h2>
+    <h2 id="omanifestogil"><strong>O Manifesto Ágil</strong></h2>
 
-<p>No ano de 2001 alguns membros da comunidade de desenvolvimento de software se reuniram para discutir os métodos leves, que, à época, era a denominação dada aos métodos de desenvolvimento de software que começavam a surgir. Essa reunião teve como resultado um manifesto, que foi assinado pelos 17 participantes da reunião, e que posteriormente foi conhecido como o <strong>Manifesto Ágil</strong>.</p>
+    <p>No ano de 2001 alguns membros da comunidade de desenvolvimento de software se reuniram para discutir os métodos leves, que, à época, era a denominação dada aos métodos de desenvolvimento de software que começavam a surgir. Essa reunião teve como resultado um manifesto, que foi assinado pelos 17 participantes da reunião, e que posteriormente foi conhecido como o <strong>Manifesto Ágil</strong>.</p>
 
-<p>O <strong><a href="https://agilemanifesto.org/">Manifesto Ágil</a></strong> é uma declaração de valores e princípios que os participantes da reunião entendiam como essenciais para o desenvolvimento de software. Entre esses princípios e valores está o foco cada vez maior em <strong>satisfazer o cliente através da entrega rápida e contínua de software</strong>, adaptação a mudanças, e também uma ênfase maior na comunicação entre os stakeholders do projeto.</p>
+    <p>O <strong><a href="https://agilemanifesto.org/">Manifesto Ágil</a></strong> é uma declaração de valores e princípios que os participantes da reunião entendiam como essenciais para o desenvolvimento de software. Entre esses princípios e valores está o foco cada vez maior em <strong>satisfazer o cliente através da entrega rápida e contínua de software</strong>, adaptação a mudanças, e também uma ênfase maior na comunicação entre os stakeholders do projeto.</p>
 
-<p><img src="/media/articles/sdlc/agilemanifesto.png" alt="agile manifesto" /></p>
+    <p><img src="/media/articles/sdlc/agilemanifesto.png" alt="agile manifesto" /></p>
 
-<h2 id="entregacontnua"><strong>Entrega Contínua</strong></h2>
+    <h2 id="entregacontnua"><strong>Entrega Contínua</strong></h2>
 
-<p>O primeiro princípio do Manifesto Ágil é um dos pontos mais presentes no dia-a-dia das empresas de desenvolvimento de software, e norteia todo o modelo de entrega de software que conhecemos:</p>
+    <p>O primeiro princípio do Manifesto Ágil é um dos pontos mais presentes no dia-a-dia das empresas de desenvolvimento de software, e norteia todo o modelo de entrega de software que conhecemos:</p>
 
-<h3 id="nossamaiorprioridadesatisfazeroclienteatravsdaentregaadiantadaecontnuadesoftwaredevalor"><strong>"Nossa maior prioridade é satisfazer o cliente, através da entrega adiantada e contínua de software de valor."</strong></h3>
+    <h3 id="nossamaiorprioridadesatisfazeroclienteatravsdaentregaadiantadaecontnuadesoftwaredevalor"><strong>"Nossa maior prioridade é satisfazer o cliente, através da entrega adiantada e contínua de software de valor."</strong></h3>
 
-<p>A entrega contínua de software pode ser definida como uma abordagem de engenharia de software que destina-se a criar, testar e liberar software mais rapidamente e com maior frequência. Para alcançar o objetivo de criar, testar e liberar software mais rapidamente e com maior frequência, diferentes processos e abordagens foram surgindo, e, consequentemente, também surgiram especialistas nessas vertentes.</p>
+    <p>A entrega contínua de software pode ser definida como uma abordagem de engenharia de software que destina-se a criar, testar e liberar software mais rapidamente e com maior frequência. Para alcançar o objetivo de criar, testar e liberar software mais rapidamente e com maior frequência, diferentes processos e abordagens foram surgindo, e, consequentemente, também surgiram especialistas nessas vertentes.</p>
 
-<p>Os especialistas em criar e testar fazem parte da equipe de <strong>desenvolvimento</strong>, e os especialistas em liberar software normalmente fazem parte da equipe de <strong>operações</strong>. A equipe de desenvolvimento tem o foco em sempre aumentar o valor do negócio, criando novas funcionalidades para o produto e as deixando da maneira que o cliente deseja. A equipe de operações, que geralmente é responsável pela manutenção dos servidores, tem o foco em manter os ambientes estáveis e intactos, para que o cliente possa acessar o sistema quando desejar.</p>
+    <p>Os especialistas em criar e testar fazem parte da equipe de <strong>desenvolvimento</strong>, e os especialistas em liberar software normalmente fazem parte da equipe de <strong>operações</strong>. A equipe de desenvolvimento tem o foco em sempre aumentar o valor do negócio, criando novas funcionalidades para o produto e as deixando da maneira que o cliente deseja. A equipe de operações, que geralmente é responsável pela manutenção dos servidores, tem o foco em manter os ambientes estáveis e intactos, para que o cliente possa acessar o sistema quando desejar.</p>
 
-<p>Com focos diferentes, a segmentação entre as equipes se tornou algo natural, pois cada equipe tinha os seus próprios objetivos. Mesmo com o objetivo final, satisfazer o cliente através da entrega contínua de software de valor, compartilhado, os objetivos meio de cada equipe frequentemente tinham suas diferenças, algumas vezes eram até concorrentes. </p>
+    <p>Com focos diferentes, a segmentação entre as equipes se tornou algo natural, pois cada equipe tinha os seus próprios objetivos. Mesmo com o objetivo final, satisfazer o cliente através da entrega contínua de software de valor, compartilhado, os objetivos meio de cada equipe frequentemente tinham suas diferenças, algumas vezes eram até concorrentes. </p>
 
-<h2 id="devvsops"><strong>Dev vs Ops</strong></h2>
+    <h2 id="devvsops"><strong>Dev vs Ops</strong></h2>
 
-<p>A equipe de <strong>de</strong>sen<strong>v</strong>olvimento , com foco em implementar novas funcionalidades o mais rápido possível, precisa frequentemente descobrir novos meios de desenvolver essas funcionalidades, o que inclui a utilização de tecnologias que até então não eram utilizadas no projeto. A equipe de <strong>op</strong>eraçõe<strong>s</strong>, muitas vezes chamada de TI, com foco em prover um ambiente estável para o sistema funcionar, têm um perfil mais conservador, e acreditam que quanto menos alterações o ambiente produtivo tiver, melhor. </p>
+    <p>A equipe de <strong>de</strong>sen<strong>v</strong>olvimento , com foco em implementar novas funcionalidades o mais rápido possível, precisa frequentemente descobrir novos meios de desenvolver essas funcionalidades, o que inclui a utilização de tecnologias que até então não eram utilizadas no projeto. A equipe de <strong>op</strong>eraçõe<strong>s</strong>, muitas vezes chamada de TI, com foco em prover um ambiente estável para o sistema funcionar, têm um perfil mais conservador, e acreditam que quanto menos alterações o ambiente produtivo tiver, melhor. </p>
 
-<p>É fácil enxergar que, devido aos diferentes perfis e foco, conflitos entre as equipes surgem de maneira natural, principalmente em situações que a equipe de desenvolvimento gera uma atualização para o sistema que envolve alteração de configuração no ambiente de produção, o que afeta diretamente a estabilidade desse ambiente.</p>
+    <p>É fácil enxergar que, devido aos diferentes perfis e foco, conflitos entre as equipes surgem de maneira natural, principalmente em situações que a equipe de desenvolvimento gera uma atualização para o sistema que envolve alteração de configuração no ambiente de produção, o que afeta diretamente a estabilidade desse ambiente.</p>
 
-<h2 id="devandops"><strong>Dev and Ops</strong></h2>
+    <h2 id="devandops"><strong>Dev and Ops</strong></h2>
 
-<p>Com o objetivo de eliminar esses conflitos, e mostrar que as áreas de desenvolvimento e operações poderiam e deveriam <strong>trabalhar juntas</strong>, e também que os problemas de uma área também eram o problema da outra área, pois ambas tem o objetivo final da entrega contínua de software de valor de maneira cada vez mais eficiente, <strong>John Allspaw</strong> e <strong>Paul Hammond</strong> realizaram uma apresentação denominada <em><a href="https://www.slideshare.net/jallspaw/10-deploys-per-day-dev-and-ops-cooperation-at-flickr/">10+ Deploys per Day: Dev And Ops Cooperation</a></em>, onde defenderam que a única maneira de alcançar esse objetivo final é por meio da empatia e integração entre as equipes de desenvolvimento e operações.</p>
+    <p>Com o objetivo de eliminar esses conflitos, e mostrar que as áreas de desenvolvimento e operações poderiam e deveriam <strong>trabalhar juntas</strong>, e também que os problemas de uma área também eram o problema da outra área, pois ambas tem o objetivo final da entrega contínua de software de valor de maneira cada vez mais eficiente, <strong>John Allspaw</strong> e <strong>Paul Hammond</strong> realizaram uma apresentação denominada <em><a href="https://www.slideshare.net/jallspaw/10-deploys-per-day-dev-and-ops-cooperation-at-flickr/">10+ Deploys per Day: Dev And Ops Cooperation</a></em>, onde defenderam que a única maneira de alcançar esse objetivo final é por meio da empatia e integração entre as equipes de desenvolvimento e operações.</p>
 
-<p>Essa apresentação serviu como base do que hoje é conhecido como Cultura DevOps, e também dos cinco pilares do DevOps, conhecido como <strong>CALMS</strong>:</p>
+    <p>Essa apresentação serviu como base do que hoje é conhecido como Cultura DevOps, e também dos cinco pilares do DevOps, conhecido como <strong>CALMS</strong>:</p>
 
-<p><img src="/media/articles/sdlc/CALMS-1.jpg" alt="CALMS" /></p>
+    <p><img src="/media/articles/sdlc/CALMS-1.jpg" alt="CALMS" /></p>
 
-<p>Através da cultura DevOps, e dos pilares CALMS, se tornou possível alcançar diversos benefícios, entre os quais:</p>
+    <p>Através da cultura DevOps, e dos pilares CALMS, se tornou possível alcançar diversos benefícios, entre os quais:</p>
 
-<ul>
-<li><strong>Maior integração e empatia entre as áreas:</strong> Existindo uma maior integração, as barreiras entre as equipes de desenvolvimento e operações são quebradas, possibilitando uma maior comunicação e sinergia entre os times;</li>
+    <ul>
+    <li><strong>Maior integração e empatia entre as áreas:</strong> Existindo uma maior integração, as barreiras entre as equipes de desenvolvimento e operações são quebradas, possibilitando uma maior comunicação e sinergia entre os times;</li>
 
-<li><strong>Simplificação, automação e racionalização de processos:</strong> Com o objetivo de transformar o desenvolvimento de software em uma tarefa menos burocrática, busca-se simplificar e automatizar quantos processos for possível, diminuindo a chance de erros acontecerem, e também aumentando a velocidade da entrega do software.</li>
-</ul>
+    <li><strong>Simplificação, automação e racionalização de processos:</strong> Com o objetivo de transformar o desenvolvimento de software em uma tarefa menos burocrática, busca-se simplificar e automatizar quantos processos for possível, diminuindo a chance de erros acontecerem, e também aumentando a velocidade da entrega do software.</li>
+    </ul>
 
-<h2 id="shiftingleft"><strong>Shifting left</strong></h2>
+    <h2 id="shiftingleft"><strong>Shifting left</strong></h2>
 
-<p>Porém, para que o DevOps tenha sucesso, alguns elementos chave precisam existir, e o principal deles é o conceito de <em>shift left</em>. O <em>shift left</em> nada mais é que realizar testes, só que realizar testes cada vez mais cedo no ciclo de vida de um produto. Mas por que o shift left é tão importante assim? Um artigo do <strong><a href="https://developers.slashdot.org/story/03/10/21/0141215/software-defects---do-late-bugs-really-cost-more">Slashdot</a></strong>, e posteriormente citado <strong><a href="https://code.likeagirl.io/pushing-left-like-a-boss-part-3-secure-design-16d729453afa">aqui</a></strong>, trouxe a informação que um erro encontrado nos últimos estágios do desenvolvimento pode ser até 100x mais caro que um erro encontrado em estágios iniciais. </p>
+    <p>Porém, para que o DevOps tenha sucesso, alguns elementos chave precisam existir, e o principal deles é o conceito de <em>shift left</em>. O <em>shift left</em> nada mais é que realizar testes, só que realizar testes cada vez mais cedo no ciclo de vida de um produto. Mas por que o shift left é tão importante assim? Um artigo do <strong><a href="https://developers.slashdot.org/story/03/10/21/0141215/software-defects---do-late-bugs-really-cost-more">Slashdot</a></strong>, e posteriormente citado <strong><a href="https://code.likeagirl.io/pushing-left-like-a-boss-part-3-secure-design-16d729453afa">aqui</a></strong>, trouxe a informação que um erro encontrado nos últimos estágios do desenvolvimento pode ser até 100x mais caro que um erro encontrado em estágios iniciais. </p>
 
-<p>Um erro, além de ser sinal que o software não foi construído da melhor maneira, é um gasto a mais para o projeto. Um projeto que custe muito mais caro do que a estimativa inicial é um problema, e pode gerar conflitos com os stakeholders. Se os erros são detectados antes, a capacidade de solucioná-los antes de chegarem ao cliente é habilitada, o que ajuda a cumprir o propósito inicial, <strong><em>produzir software de alta qualidade, e que atenda as necessidades do cliente</em></strong>, e ainda reduzindo custos de desenvolvimento e manutenção. Porém, testes que cubram a aplicação inteira costumam ser trabalhosos, então como realizar o <em>shift left</em> sem perder desempenho, e continuando a entregar software de maneira rápida? <strong>Testes automatizados</strong>.</p>
+    <p>Um erro, além de ser sinal que o software não foi construído da melhor maneira, é um gasto a mais para o projeto. Um projeto que custe muito mais caro do que a estimativa inicial é um problema, e pode gerar conflitos com os stakeholders. Se os erros são detectados antes, a capacidade de solucioná-los antes de chegarem ao cliente é habilitada, o que ajuda a cumprir o propósito inicial, <strong><em>produzir software de alta qualidade, e que atenda as necessidades do cliente</em></strong>, e ainda reduzindo custos de desenvolvimento e manutenção. Porém, testes que cubram a aplicação inteira costumam ser trabalhosos, então como realizar o <em>shift left</em> sem perder desempenho, e continuando a entregar software de maneira rápida? <strong>Testes automatizados</strong>.</p>
 
-<p>Testes automatizados são um <strong>componente chave</strong> para o <em>shift left</em> ser possível, pois eles reduzem consideravelmente o tempo e esforço gasto para validar que a aplicação  está se comportando da maneira que deveria no ambiente, e é aqui que o termo <strong>integração contínua</strong> começa a ser definido. </p>
+    <p>Testes automatizados são um <strong>componente chave</strong> para o <em>shift left</em> ser possível, pois eles reduzem consideravelmente o tempo e esforço gasto para validar que a aplicação  está se comportando da maneira que deveria no ambiente, e é aqui que o termo <strong>integração contínua</strong> começa a ser definido. </p>
 
-<h2 id="cicd"><strong>CI/CD</strong></h2>
+    <h2 id="cicd"><strong>CI/CD</strong></h2>
 
-<p>A <strong>integração contínua</strong> (Continuous Integration - CI) é uma prática do DevOps em que os desenvolvedores juntam suas alterações de código em um repositório central e, após essa junção, testes automatizados são executados. É importante notar que, o ideal é que não só testes no código sejam executados, mas também testes na aplicação em funcionamento em um ambiente semelhante ao ambiente de produção, ou até mesmo no ambiente de produção, para que o sistema seja validado em condições que se assemelhem às condições em que o cliente fará uso da solução, o que abrange também o conceito de <strong>entrega contínua</strong> (Continuous Delivery - CD).</p>
+    <p>A <strong>integração contínua</strong> (Continuous Integration - CI) é uma prática do DevOps em que os desenvolvedores juntam suas alterações de código em um repositório central e, após essa junção, testes automatizados são executados. É importante notar que, o ideal é que não só testes no código sejam executados, mas também testes na aplicação em funcionamento em um ambiente semelhante ao ambiente de produção, ou até mesmo no ambiente de produção, para que o sistema seja validado em condições que se assemelhem às condições em que o cliente fará uso da solução, o que abrange também o conceito de <strong>entrega contínua</strong> (Continuous Delivery - CD).</p>
 
-<p>Por ser um componente importante, soluções foram construídas para auxiliar na realização da integração e da entrega contínua, como o estabelecimento de pipelines de integração contínua e de entrega contínua (Pipelines CI/CD), e também ferramentas para gerenciarem esses pipelines, como o <strong><a href="https://jenkins.io/">Jenkins</a></strong>, que tornaram a realização do <em>shift left</em> mais fácil.</p>
+    <p>Por ser um componente importante, soluções foram construídas para auxiliar na realização da integração e da entrega contínua, como o estabelecimento de pipelines de integração contínua e de entrega contínua (Pipelines CI/CD), e também ferramentas para gerenciarem esses pipelines, como o <strong><a href="https://jenkins.io/">Jenkins</a></strong>, que tornaram a realização do <em>shift left</em> mais fácil.</p>
 
-<h2 id="devsecops"><strong>Dev(Sec)Ops</strong></h2>
+    <h2 id="devsecops"><strong>Dev(Sec)Ops</strong></h2>
 
-<p>Mas e o Sec, como se relaciona com o Dev e o Ops? De maneira semelhante às equipes de desenvolvimento e de operações, a equipe de segurança também possuía sua parte na entrega do software, que normalmente ficava relegada aos estágios finais do desenvolvimento. Com a popularização da integração e da entrega contínua, percebeu-se que a área de segurança também deveria evoluir, e fazer parte do movimento de <em>shift left</em>.</p>
+    <p>Mas e o Sec, como se relaciona com o Dev e o Ops? De maneira semelhante às equipes de desenvolvimento e de operações, a equipe de segurança também possuía sua parte na entrega do software, que normalmente ficava relegada aos estágios finais do desenvolvimento. Com a popularização da integração e da entrega contínua, percebeu-se que a área de segurança também deveria evoluir, e fazer parte do movimento de <em>shift left</em>.</p>
 
-<p><img src="/media/articles/sdlc/DevSecOps-Process.jpg" alt="DevSecOps-Process.jpg" /></p>
+    <p><img src="/media/articles/sdlc/DevSecOps-Process.jpg" alt="DevSecOps-Process.jpg" /></p>
 
-<p>O modelo tradicional de aplicar segurança da informação ao desenvolvimento era principalmente através da realização de <em>pentests</em>. Com o aumento da velocidade do desenvolvimento, e da quantidade de entregas, os <em>pentests</em>, e a frequência com que estes eram realizados, tornaram-se insuficientes para garantir que o sistema e os ambientes estão de acordo com o padrão de segurança desejado.</p>
+    <p>O modelo tradicional de aplicar segurança da informação ao desenvolvimento era principalmente através da realização de <em>pentests</em>. Com o aumento da velocidade do desenvolvimento, e da quantidade de entregas, os <em>pentests</em>, e a frequência com que estes eram realizados, tornaram-se insuficientes para garantir que o sistema e os ambientes estão de acordo com o padrão de segurança desejado.</p>
 
-<p>Quando se fala em padrão de segurança, é importante que exista um padrão tanto para o código quanto para a infraestrutura. O DevOps introduziu ao modelo de desenvolvimento ágil ferramentas e tecnologias que se tornaram essenciais, como os <strong>containers</strong>. O uso de containers gerou um maior dinamismo e escalabilidade para a infraestrutura, porém, caso se tenha uma utilização ou configuração de maneira indevida, essa tecnologia pode se tornar uma faca de dois gumes. A maneira de realizar o <em>shift left</em> na segurança é, pasmém, automatizando os testes. </p>
+    <p>Quando se fala em padrão de segurança, é importante que exista um padrão tanto para o código quanto para a infraestrutura. O DevOps introduziu ao modelo de desenvolvimento ágil ferramentas e tecnologias que se tornaram essenciais, como os <strong>containers</strong>. O uso de containers gerou um maior dinamismo e escalabilidade para a infraestrutura, porém, caso se tenha uma utilização ou configuração de maneira indevida, essa tecnologia pode se tornar uma faca de dois gumes. A maneira de realizar o <em>shift left</em> na segurança é, pasmém, automatizando os testes. </p>
 
-<p>A automatização de testes de segurança pode ser alcançada através da utilização de ferramentas que validem dependências de código (<strong><a href="https://www.checkmarx.com/">Checkmarx</a></strong>), a segurança da infraestrutura (<strong><a href="https://www.tenable.com/products/nessus">Nessus</a></strong> e <strong><a href="http://www.openvas.org/">OpenVas</a></strong>), de ferramentas de análise estática de código (<strong><a href="https://www.sonarqube.org/">SonarQube</a></strong> acompanhado de plugins de segurança), ferramentas de análise dinâmica de código (<strong><a href="https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project">OWASP ZAP</a></strong>), e também através da realização de testes unitários que, não só validem que a aplicação está funcionando, mas também que princípios básicos como a autenticação e autorização estejam garantidos.</p>
+    <p>A automatização de testes de segurança pode ser alcançada através da utilização de ferramentas que validem dependências de código (<strong><a href="https://www.checkmarx.com/">Checkmarx</a></strong>), a segurança da infraestrutura (<strong><a href="https://www.tenable.com/products/nessus">Nessus</a></strong> e <strong><a href="http://www.openvas.org/">OpenVas</a></strong>), de ferramentas de análise estática de código (<strong><a href="https://www.sonarqube.org/">SonarQube</a></strong> acompanhado de plugins de segurança), ferramentas de análise dinâmica de código (<strong><a href="https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project">OWASP ZAP</a></strong>), e também através da realização de testes unitários que, não só validem que a aplicação está funcionando, mas também que princípios básicos como a autenticação e autorização estejam garantidos.</p>
 
-<h2 id="concluso"><strong>Conclusão</strong></h2>
+    <h2 id="concluso"><strong>Conclusão</strong></h2>
 
-<p>Com o passar dos anos os processos de desenvolvimento de software sofreram grandes transformações, mas o objetivo final quase sempre foi o mesmo: Entregar software de qualidade para o cliente de maneira mais rápida possível. Muito do que temos hoje como a maneira ideal de entrega de software existe devido ao Manifesto Ágil, que foi um marco na história do desenvolvimento, e que levou ao nascimento do DevOps, que trouxe uma maior integração entre os times de desenvolvimento e operação. Os times de segurança, percebendo que estavam ficando para trás, também se adaptaram à essa nova realidade, e desenvolveram soluções para fazer parte do movimento <em>shift left</em>, possibilitando que o objetivo de produzir software de qualidade de maneira mais eficiente possa ser alcançado.</p>
+    <p>Com o passar dos anos os processos de desenvolvimento de software sofreram grandes transformações, mas o objetivo final quase sempre foi o mesmo: Entregar software de qualidade para o cliente de maneira mais rápida possível. Muito do que temos hoje como a maneira ideal de entrega de software existe devido ao Manifesto Ágil, que foi um marco na história do desenvolvimento, e que levou ao nascimento do DevOps, que trouxe uma maior integração entre os times de desenvolvimento e operação. Os times de segurança, percebendo que estavam ficando para trás, também se adaptaram à essa nova realidade, e desenvolveram soluções para fazer parte do movimento <em>shift left</em>, possibilitando que o objetivo de produzir software de qualidade de maneira mais eficiente possa ser alcançado.</p>
 
-<h3 id="referencias">Referencias</h3>
+    <h3 id="referencias">Referencias</h3>
 
-<p>https://www.guru99.com/software-development-life-cycle-tutorial.html</p>
-<p>http://engenhariadesoftwareuesb.blogspot.com/2012/12/blog-post.html</p>
-<p>https://agilemanifesto.org</p>
-<p>http://agile.pub/assuntos-diversos/afinal-o-que-e-devops/</p>
-<p>https://gaea.com.br/o-que-e-devops-conceito/</p>
-<p>https://www.quali.com/blog/what-do-devops-organizations-need-to-do-to-shift-left/</p>
-<p>https://aws.amazon.com/pt/devops/continuous-integration/</p>
-<p>https://code.likeagirl.io/pushing-left-like-a-boss-part-3-secure-design-16d729453afa</p>
-<p>https://www.redhat.com/pt-br/topics/devops/what-is-devsecops</p>
+    <p>https://www.guru99.com/software-development-life-cycle-tutorial.html</p>
+    <p>http://engenhariadesoftwareuesb.blogspot.com/2012/12/blog-post.html</p>
+    <p>https://agilemanifesto.org</p>
+    <p>http://agile.pub/assuntos-diversos/afinal-o-que-e-devops/</p>
+    <p>https://gaea.com.br/o-que-e-devops-conceito/</p>
+    <p>https://www.quali.com/blog/what-do-devops-organizations-need-to-do-to-shift-left/</p>
+    <p>https://aws.amazon.com/pt/devops/continuous-integration/</p>
+    <p>https://code.likeagirl.io/pushing-left-like-a-boss-part-3-secure-design-16d729453afa</p>
+    <p>https://www.redhat.com/pt-br/topics/devops/what-is-devsecops</p>
+</body>
