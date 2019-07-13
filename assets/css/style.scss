@@ -1,52 +1,103 @@
 @import "jekyll-theme-slate";
 
+
+
 .btn-github .icon {
+
 	opacity: 0.6;
+
 	background: url("../media/index/blacktocat.png") 0 0 no-repeat
+
 }
+
+
 
 .btn-where .icon {
+
 	opacity: 0.6;
+
 	background: url("../media/index/where.png") 0 0 no-repeat
+
 }
+
+
 
 .btn-twitter .icon {
+
 	opacity: 1.0;
+
 	background: url("../media/index/twitter.png") 0 0 no-repeat
+
 }
+
+
 
 .btn-linkedin .icon {
+
 	opacity: 1.0;
+
 	background: url("../media/index/linkedin.png") 0 0 no-repeat
+
 }
+
+
 
 .btn-gmail .icon {
+
 	opacity: 0.8;
+
 	background: url("../media/index/Mail.png") 0 0 no-repeat
+
 }
+
+
 
 a {
+
 	color: #63c0f5;
+
 	text-shadow: 0 0 5px rgba(104, 182, 255, 0.5)
+
 }
+
+
 
 .cf:before,
-.cf:after {
-	content: "";
-	display: table
-}
 
 .cf:after {
-	clear: both
+
+	content: "";
+
+	display: table
+
 }
+
+
+
+.cf:after {
+
+	clear: both
+
+}
+
+
 
 .cf {
+
 	zoom: 1
+
 }
 
+
+
 .center {
+
 	display: block;
+
 	margin-left: auto;
+
 	margin-right: auto;
+
 	width: 70%;
+
 }
