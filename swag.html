@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/style/style.css">
+<title> marcelo's place</title>
+</head>
+<body>
+	<header>
+		<div class="container">
+		<h1>HTB Shop writeup</h1>
+		</div>
+	</header>
+	<div class ="container">
+		<section id="writeup">
+		<p>magento store application running in port 80. standard enum, found some files that weren't too useful </p>
+		<p>started googling for magento vulnerabilities and found this <a href="https://packetstormsecurity.com/files/133327/Magento-Add-Administrator-Account.html">this</a></p>
+    <p>found the admin page at index.php/admin and created my admin user. inside the panel i went to magento connect manager and</p>
+    <p>installed <a href="https://pluginarchive.com/magento/magpleasure_filesystem">this</a> which allowed me to modify the .php files of the application</p>
+    <p>from there i uploaded a php reverse shell, fired nc -nlvp at my machine and got low priv shell and pwned user</p>
+    <p>wasted alot time in root because of stupidity. sudo -l printed (root) NOPASSWD: /usr/bin/vi /var/www/html/* and i thought it meant</p>
+    <p>that i could run sudo vi without password, and anything in /var/www/html/ with sudo without password, but it actually meant that</p>
+    <p>i could run sudo vi without password to edit any file in /var/www/html/ directory. ran it and once inside vi i pressed :sh, which got me root shell and pwned the box</p>
+</body>
+</html>
