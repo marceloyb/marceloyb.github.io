@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/marceloyb.github.io/style/style.css">
+	<head>
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/marceloyb.github.io/style/style.css">
 <title> marcelo's place</title>
 </head>
 
@@ -16,47 +16,38 @@
 </header>
 
 <div class ="container">
-	<section id="article">
+
+	<section id="intro">
+		<h2 id="intro"><strong>Introdução</strong></h2>
+		<p>O Ciclo de vida do desenvolvimento de software (Software Development Lifecycle - SDLC) é um processo sistemático de produção de software que garante a qualidade e a corretude do que foi construído. O SDLC visa produzir software de alta qualidade, e que atenda as necessidades do cliente. Esse ciclo de vida é constituído por diversas fases, e cada fase tem seus próprios processos e gera seus próprios artefatos.</p>
+		<p>Existem diferentes abordagens e visões sobre quais as fases do SDLC, porém o núcleo de todas essas abordagens é <strong>geralmente</strong> composto pelos seguintes estágios:</p>
+		<ul>
+			<li><strong>Análise de Requisitos:</strong> Entender quais são os requisitos do cliente para o sistema, o que o sistema precisa fazer</li>
+			<li><strong>Modelagem:</strong> Definir qual será a solução técnica com base nos requisitos, e como será feito</li>
+	  		<li><strong>Desenvolvimento:</strong> Construir o sistema com base na solução técnica definida</li>
+	  		<li><strong>Homologação:</strong> Validar que o que foi construído está cumprindo a necessidade do cliente</li>
+	  		<li><strong>Disponibilização do software para o usuário:</strong> Como o próprio nome sugere, disponibilizar a solução construída para que o cliente possa fazer uso</li>
+    		</ul>
+		
+	<section id="metodologias">		
+		<h2 id="metodologiasdedesenvolvimento"><strong>Metodologias de desenvolvimento</strong></h2>
+		<p>Com o passar dos anos, diferentes metodologias de desenvolvimento surgiram, e entre as primeiras que foram amplamente aceitas está o Modelo Cascata. Esse modelo tem a particularidade de que uma fase só começa no momento em que a fase imediatamente anterior a essa termina, o que traz alguns <strong>problemas</strong>, entre os quais:</p>
     
-    <p>O Ciclo de vida do desenvolvimento de software (Software Development Lifecycle - SDLC) é um processo sistemático de produção de software que garante a qualidade e a corretude do que foi construído. O SDLC visa produzir software de alta qualidade, e que atenda as necessidades do cliente. Esse ciclo de vida é constituído por diversas fases, e cada fase tem seus próprios processos e gera seus próprios artefatos.</p>
+		<ol>
+			<li>O Modelo Cascata tem iterações (execução de todas as fases do ciclo de desenvolvimento) de longa duração, e o cliente só irá ter contato com o sistema quando o projeto estiver próximo ao final;</li>
+			<li>Como reflexo do problema citado anteriormente, o cliente só irá detectar divergências entre o que ele tinha como requisito, e o que foi construído, quando o projeto já estiver quase terminado.</li>
+		</ol>
+    
+		<p><img src="/media/articles/sdlc/waterfall.png" alt="waterfall method" align="middle"/></p>
+		<p>Esses problemas, por si só, já podem arruinar o projeto, pois o usuário do sistema construído irá demorar para receber a solução em mãos, e poderá não ficar satisfeito ao recebê-la, ou até mesmo, em uma situação extrema, a solução construída pode não atender às necessidades do cliente, resultando em um fracasso total.</p>
+    		<p>Modelos de desenvolvimento que vieram após o Cascata, como o Modelo Incremental e o Modelo Espiral, surgiram com o objetivo de sanar essa deficiência do Modelo Cascata, e com eles começou-se a ter um foco maior no que o cliente deseja para o sistema, com ciclos de desenvolvimento mais curtos, e entregas menores. Entre as <strong>principais vantagens</strong> que esses modelos trouxeram estão:</p>
 
-    <p>Existem diferentes abordagens e visões sobre quais as fases do SDLC, porém o núcleo de todas essas abordagens é <strong>geralmente</strong> composto pelos seguintes estágios:</p>
-
-    <ul>
-    <li><strong>Análise de Requisitos:</strong> Entender quais são os requisitos do cliente para o sistema, o que o sistema precisa fazer</li>
-
-    <li><strong>Modelagem:</strong> Definir qual será a solução técnica com base nos requisitos, e como será feito</li>
-
-    <li><strong>Desenvolvimento:</strong> Construir o sistema com base na solução técnica definida</li>
-
-    <li><strong>Homologação:</strong> Validar que o que foi construído está cumprindo a necessidade do cliente</li>
-
-    <li><strong>Disponibilização do software para o usuário:</strong> Como o próprio nome sugere, disponibilizar a solução construída para que o cliente possa fazer uso</li>
-    </ul>
-
-    <h2 id="metodologiasdedesenvolvimento"><strong>Metodologias de desenvolvimento</strong></h2>
-
-    <p>Com o passar dos anos, diferentes metodologias de desenvolvimento surgiram, e entre as primeiras que foram amplamente aceitas está o Modelo Cascata. Esse modelo tem a particularidade de que uma fase só começa no momento em que a fase imediatamente anterior a essa termina, o que traz alguns <strong>problemas</strong>, entre os quais:</p>
-
-    <ol>
-    <li>O Modelo Cascata tem iterações (execução de todas as fases do ciclo de desenvolvimento) de longa duração, e o cliente só irá ter contato com o sistema quando o projeto estiver próximo ao final;</li>
-
-    <li>Como reflexo do problema citado anteriormente, o cliente só irá detectar divergências entre o que ele tinha como requisito, e o que foi construído, quando o projeto já estiver quase terminado.</li>
-    </ol>
-
-    <p><img src="/media/articles/sdlc/waterfall.png" alt="waterfall method" align="middle"/></p>
-
-    <p>Esses problemas, por si só, já podem arruinar o projeto, pois o usuário do sistema construído irá demorar para receber a solução em mãos, e poderá não ficar satisfeito ao recebê-la, ou até mesmo, em uma situação extrema, a solução construída pode não atender às necessidades do cliente, resultando em um fracasso total.</p>
-
-    <p>Modelos de desenvolvimento que vieram após o Cascata, como o Modelo Incremental e o Modelo Espiral, surgiram com o objetivo de sanar essa deficiência do Modelo Cascata, e com eles começou-se a ter um foco maior no que o cliente deseja para o sistema, com ciclos de desenvolvimento mais curtos, e entregas menores. Entre as <strong>principais vantagens</strong> que esses modelos trouxeram estão:</p>
-
-    <ol>
-    <li>Fazer entregas menores é menos arriscado do que fazer entregas maiores, pois, caso existam divergências entre o que o cliente deseja e o que foi construído, essas divergências são detectadas mais cedo, gerando uma maior responsividade no processo de desenvolvimento;</li>
-
-    <li>Com a realização de um número maior de iterações em menos tempo, se um grande erro é cometido, apenas a última iteração é descartada, resultando em uma menor perda de tempo.</li>
-    </ol>
-
-    <p>Os benefícios de se ter iterações mais rápidas e flexíveis foram logo notados, e outras melhorias começaram a ser aplicadas no processo de desenvolvimento, como a realização dos processos de análise, desenvolvimento e homologação "em paralelo", o que começou a ser a base do desenvolvimento ágil de software.</p>
+		<ol>
+			<li>Fazer entregas menores é menos arriscado do que fazer entregas maiores, pois, caso existam divergências entre o que o cliente deseja e o que foi construído, essas divergências são detectadas mais cedo, gerando uma maior responsividade no processo de desenvolvimento;</li>
+			<li>Com a realização de um número maior de iterações em menos tempo, se um grande erro é cometido, apenas a última iteração é descartada, resultando em uma menor perda de tempo.</li>
+		</ol>
+		
+		<p>Os benefícios de se ter iterações mais rápidas e flexíveis foram logo notados, e outras melhorias começaram a ser aplicadas no processo de desenvolvimento, como a realização dos processos de análise, desenvolvimento e homologação "em paralelo", o que começou a ser a base do desenvolvimento ágil de software.</p>
 
     <h2 id="omanifestogil"><strong>O Manifesto Ágil</strong></h2>
 
