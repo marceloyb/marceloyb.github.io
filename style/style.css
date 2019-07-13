@@ -325,27 +325,27 @@ hr {
 
 .btn-github .icon {
 	opacity: 0.6;
-	background: url("../blacktocat.png") 0 0 no-repeat
+	background: url("../media/index/blacktocat.png") 0 0 no-repeat
 }
 
 .btn-where .icon {
 	opacity: 0.6;
-	background: url("../where.png") 0 0 no-repeat
+	background: url("../media/index/where.png") 0 0 no-repeat
 }
 
 .btn-twitter .icon {
 	opacity: 1.0;
-	background: url("../twitter.png") 0 0 no-repeat
+	background: url("../media/index/twitter.png") 0 0 no-repeat
 }
 
 .btn-linkedin .icon {
 	opacity: 1.0;
-	background: url("../linkedin.png") 0 0 no-repeat
+	background: url("../media/index/linkedin.png") 0 0 no-repeat
 }
 
 .btn-gmail .icon {
 	opacity: 0.8;
-	background: url("../Mail.png") 0 0 no-repeat
+	background: url("../media/index/Mail.png") 0 0 no-repeat
 }
 
 a {
